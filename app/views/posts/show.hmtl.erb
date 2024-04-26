@@ -1,0 +1,14 @@
+<div class="container-fluid">
+
+<div class="container">
+<h1> <%= @post.title%> </h1>
+<h3> <%= @post.content%> </h3>
+<h3> User: <%= @post.user_id %> </h3>
+<h3> Likes: <%= @post.answers_count %> </h3>
+<h3> <%= @post.published_at %> </h3>
+<%= link_to posts_path, class: "btn btn-primary" do%>
+<i class="bi bi-arrow-90deg-left"></i> Back
+<% end %>
+</div>
+
+</div>

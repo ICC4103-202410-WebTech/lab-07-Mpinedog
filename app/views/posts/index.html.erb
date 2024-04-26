@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>All Posts</h1>
+
+  <table class="table table-bordered align-middle">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+        <th scope="col">User id</th>
+        <th scope="col">answers count</th>
+        <th scope="col">likes count</th>
+        <th scope="col">published time</th>
+        <th scope="col">View</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @posts.each do |post| %>
+      <tr>
+        <th scope="row"><%= post.id %></th>
+        <td><%= post.title %></td>
+        <td><%= post.content %></td>
+        <td><%= post.user_id %></td>
+        <td><%= post.answers_count %></td>
+        <td><%= post.likes_count %></td>
+        <td><%= post.published_at %></td>
+        <td>
+          <%= link_to "View", post_path(post), class: "btn btn-primary btn-sm" %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

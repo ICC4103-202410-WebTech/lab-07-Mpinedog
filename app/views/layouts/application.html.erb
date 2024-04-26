@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lab06</title>
+    <title>Y</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,14 @@
   </head>
 
   <body>
+    <%= render "layouts/navbar" %>
     <%= yield %>
+    <footer class="footer">
+    <div class="fixed-bottom">
+    <div class="container">
+      <p>&copy; <%= Time.now.year %> Y. All rights reserved.</p>
+    </div>
+    </div>
+    </footer>
   </body>
 </html>
